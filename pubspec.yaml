@@ -1,0 +1,25 @@
+name: wordel
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.8
+
+dependencies:
+  flutter:
+    sdk: flutter
+  english_words: ^4.0.0
+  shared_preferences: ^2.5.4
+  provider: ^6.1.5+1
+  sqflite: ^2.3.0        # Das ist der Datenbank-Treiber
+  path: ^1.9.0           # Hilft uns, den Speicherort auf dem Handy zu finden
+  font_awesome_flutter: ^10.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

@@ -23,8 +23,8 @@ Als nächstes habe ich vor ein Hangman-Spiel zu programmiern hierzu werde ich mi
   </tr>
 </table>
 <table>
-  <tr>gi
-    <td align="center"><b>Wordle</b></td>
+  <tr>
+    <td colspan= "2" align="center"><b>Wordle</b></td>
   </tr>
   <tr>
     <td><img src="screenshots/Wordle.png" width="200"></td>
@@ -33,7 +33,7 @@ Als nächstes habe ich vor ein Hangman-Spiel zu programmiern hierzu werde ich mi
 </table>
 <table>
   <tr>
-    <td align="center"><b>Kniffel</b></td>
+    <td colspan= "2" align="center"><b>Kniffel</b></td>
   </tr>
   <tr>
     <td><img src="screenshots/Kniffel.png" width="200"></td>

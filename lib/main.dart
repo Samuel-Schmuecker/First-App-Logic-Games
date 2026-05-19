@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 // local pages
 import 'package:wordel/04_Bagels/bagels_page.dart';
 import 'package:wordel/01_Home/home_page.dart';
+import 'package:wordel/04_Bagels/bagels_provider.dart';
 import 'package:wordel/app_state.dart';
 import 'package:wordel/03_Kniffel/kniffel_page.dart';
 import 'package:wordel/01_Home/user_page.dart';
@@ -21,8 +22,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => MyAppState(),
+    return MultiProvider(
+      providers: [
+      ChangeNotifierProvider(create: (context) => MyAppState()),
+      ChangeNotifierProvider(create: (context) => BagelsProvider())
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Wordl',

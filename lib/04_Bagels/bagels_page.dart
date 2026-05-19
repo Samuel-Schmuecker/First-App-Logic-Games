@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordel/04_Bagels/bagels_provider.dart';
 import 'package:wordel/app_state.dart';
 import 'package:provider/provider.dart';
 
@@ -8,7 +9,10 @@ class BagelsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
+
+    var bagelsState = context.watch<BagelsProvider>();
+    // Read, damit ich nur zugriff auf den pageindex hab und nicht die ganze zeit alles neu lade 
+    var appState = context.read<MyAppState>();
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.primaryContainer ,
     body: Padding(

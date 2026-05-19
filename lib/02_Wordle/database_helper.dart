@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import 'app_state.dart'; // Damit wir die User-Klasse kennen
+import '../app_state.dart'; // Damit wir die User-Klasse kennen
 
 class DatabaseHelper {
   static final DatabaseHelper instance = DatabaseHelper._init();

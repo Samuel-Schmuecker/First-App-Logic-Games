@@ -5,9 +5,9 @@ import 'dart:math';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:wordel/database_helper.dart';
-import 'package:wordel/kniffel_logic.dart';
-import 'package:wordel/player.dart';
+import 'package:wordel/02_Wordle/database_helper.dart';
+import 'package:wordel/03_Kniffel/kniffel_logic.dart';
+import 'package:wordel/03_Kniffel/player.dart';
 
 class User {
   String name;

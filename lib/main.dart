@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 // add provider for state management
 import 'package:provider/provider.dart';
 // local pages
-import 'package:wordel/bagels_page.dart';
-import 'package:wordel/home_page.dart';
+import 'package:wordel/04_Bagels/bagels_page.dart';
+import 'package:wordel/01_Home/home_page.dart';
 import 'package:wordel/app_state.dart';
-import 'package:wordel/kniffel_page.dart';
-import 'package:wordel/user_page.dart';
-import 'wordle_page.dart';
+import 'package:wordel/03_Kniffel/kniffel_page.dart';
+import 'package:wordel/01_Home/user_page.dart';
+import '02_Wordle/wordle_page.dart';
 
 void main() {
   runApp(const MyApp());

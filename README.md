@@ -14,11 +14,29 @@ Als nächstes habe ich vor ein Hangman-Spiel zu programmiern hierzu werde ich mi
 
 <table>
   <tr>
-    <td><b>Menue</b></td>
-    <td><b>Users</b></td>
+    <td align="center"><b>Menue</b></td>
+    <td align="center"><b>Users</b></td>
   </tr>
   <tr>
     <td><img src="screenshots/Menu.png" width="200"></td>
     <td><img src="screenshots/Users.png" width="200"></td>
+  </tr>
+</table>
+<table>
+  <tr>gi
+    <td align="center"><b>Wordle</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Wordle.png" width="200"></td>
+    <td><img src="screenshots/Wordle_Win.png" width="200"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td align="center"><b>Kniffel</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/Kniffel.png" width="200"></td>
+    <td><img src="screenshots/Kniffel_2.png" width="200"></td>
   </tr>
 </table>

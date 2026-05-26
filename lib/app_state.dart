@@ -8,6 +8,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wordel/02_Wordle/database_helper.dart';
 import 'package:wordel/03_Kniffel/kniffel_logic.dart';
 import 'package:wordel/03_Kniffel/player.dart';
+import 'package:flutter/foundation.dart';
 
 class User {
   String name;
@@ -21,8 +22,17 @@ class MyAppState extends ChangeNotifier {
   // DAS HIER IST DER KONSTRUKTOR
   MyAppState() {
     getWord(); // Wird sofort beim Start ausgeführt
-    readUsers();
-    _forceOpenDB();
+    if (kIsWeb) {
+      // Wenn wir im Web sind, überspringen wir die sqflite-Initialisierung
+      debugPrint("Web-Modus: sqflite wird übersprungen!");
+      users = [User("Guest",0)];
+      activeUser = users[0];
+    } else {
+      // Nur auf Android/iOS wird die Datenbank geladen
+      readUsers();
+      _forceOpenDB();
+    }
+    
   }
   void _forceOpenDB() async {
   final db = await DatabaseHelper.instance.database;
@@ -53,11 +63,11 @@ class MyAppState extends ChangeNotifier {
   void addUser(String name) async {
     var  newUser = User(name,0);
     users.add(newUser);
-    await DatabaseHelper.instance.createUser(newUser);
+    if (kIsWeb == false) {await DatabaseHelper.instance.createUser(newUser);}
     notifyListeners();
   }
   void deleteUser(int index)async{
-    await DatabaseHelper.instance.deleteUserDB(users[index]);
+     if (kIsWeb == false) {await DatabaseHelper.instance.deleteUserDB(users[index]);}
     users.removeAt(index);
    
   }
@@ -192,8 +202,10 @@ class MyAppState extends ChangeNotifier {
     }else if (versuch == 6){
       activeUser.scoreWordle+= 10;
     }
-    await DatabaseHelper.instance.addScoreDB(activeUser);
-    debugPrint(versuch.toString());
+    if (kIsWeb == false){
+      await DatabaseHelper.instance.addScoreDB(activeUser);
+      debugPrint(versuch.toString());
+    }
     notifyListeners();
   }
 
